@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo</title>
+    <link rel="stylesheet" href="estilocalculo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="mainlogo.png" alt="logo" id="logo">
+        <h1 id="nombremenu"> Proyecto Transversal 4-APV</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="main.html">Inicio</a></li>
+                <li><a href="#">Materias</a>
+                    <ul>
+                        <li>
+                            <a href="calculo.html">Calculo</a>
+                        </li>
+                        <li>
+                            <a href="ecologia.html">Ecología</a>
+                        </li>
+                        <li>
+                            <a href="ingles.html">Inglés</a>
+                        </li>
+                        <li>
+                            <a href="cpw.html">C.P.W</a>
+                        </li>
+                        <li><a href="fisica.html">Fisica</a></li>
+                    </ul>
+                </li>
+                <li><a href="miembros.html">Miembros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <div class="container">
+            <h2>Comparación de Tipos de Energías Asequibles</h2>
+            <canvas id="energyChart"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById('energyChart').getContext('2d');
+            const energyChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Solar', 'Eólica', 'Hidráulica', 'Biomasa', 'Geotérmica'],
+                    datasets: [{
+                        label: 'Costo (USD por MWh)',
+                        data: [30, 50, 40, 60, 70],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+    </article>
+    <footer>
+        <p>© Proyecto Transversal Grupo 4-APV, 2024</p>
+    </footer>
+</body>
+
+</html>

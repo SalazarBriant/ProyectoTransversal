@@ -1,0 +1,165 @@
+/*Menú General + Footer*/
+
+@font-face {
+    font-family: 'MontserratExtraBold';
+    src: url("MontserratExtraBold.ttf");
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    background-image: url("imgcpw.jpg");
+    background-size: cover;
+    font-family: 'MontserratExtraBold';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#titulo5 {
+    text-align: center;
+    color: #333;
+}
+
+.energy-type {
+    margin-bottom: 20px;
+}
+
+.energy-type h2 {
+    color: #555;
+}
+
+.energy-type p {
+    margin: 10px 0;
+}
+
+#nombremenu {
+    margin-top: 30px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0.5px;
+    z-index: 999;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
+
+
+/*Barra nav.*/
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    font-size: large;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0%;
+}
+
+nav ul>li:hover {
+    background-color: rgb(99, 99, 99);
+    color: #000;
+    transition: .4s;
+}
+
+nav li {
+    line-height: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.menu ul {
+    position: absolute;
+}
+
+nav a {
+    color: #ddd;
+    display: block;
+    padding: 0 2.4em;
+    text-decoration: none;
+    transition: .4s;
+}
+
+nav a:hover {
+    background: rgb(99, 99, 99);
+    border-radius: 15px;
+}
+
+
+/*LV1*/
+
+.menu {
+    background: #333;
+    display: table;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.menu>li {
+    float: left;
+}
+
+
+/* 2do Nivel */
+
+nav li li {
+    background: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s;
+    width: 200px;
+}
+
+nav li:hover>ul>li {
+    max-height: 1000px;
+    overflow: visible;
+}
+
+.menu>li>ul {
+    top: 100%;
+}
+
+
+/* 3er Nivel */
+
+.menu ul ul {
+    left: 100%;
+    top: 0;
+}
