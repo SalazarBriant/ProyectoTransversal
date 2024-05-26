@@ -17,4 +17,4 @@ function updateSlide() {
     slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 }
 
-setInterval(nextSlide,3500)
+setInterval(nextSlide, 3500)

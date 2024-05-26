@@ -1,4 +1,30 @@
+/*Clima*/
+.weather-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.tituloclima {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.weather-info {
+    margin: 10px 0;
+}
+
 /*Cuerpo*/
+#texto{
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    color: black;
+}
 
 @font-face {
     font-family: 'MontserratExtraBold';
@@ -11,10 +37,6 @@ body {
     font-family: 'MontserratExtraBold';
     margin: 0;
     padding: 0;
-}
-
-article {
-    margin-left: 7%;
 }
 
 .al {
