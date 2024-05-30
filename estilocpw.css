@@ -5,10 +5,6 @@
     src: url("MontserratExtraBold.ttf");
 }
 
-h2 {
-    text-align: center;
-}
-
 body {
     background-image: url("imgcpw.jpg");
     background-size: cover;
@@ -25,6 +21,7 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #titulo5 {
@@ -48,9 +45,16 @@ body {
     margin-top: 30px;
 }
 
+
+/*Menu*/
+
+#nombremenu {
+    margin-top: 30px;
+}
+
 #logo {
     width: 100px;
-    height: 100px;
+    height: auto;
     display: flex;
     align-items: center;
     border-radius: 100%;
@@ -60,26 +64,8 @@ header {
     background-color: #333;
     color: white;
     display: flex;
-    height: auto;
-    width: auto;
     justify-content: space-between;
-    border-radius: 15px;
 }
-
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    right: 0.5px;
-    z-index: 999;
-    background-color: #333;
-    text-align: center;
-    color: white;
-    border-radius: 15px;
-}
-
-
-/*Barra nav.*/
 
 nav {
     display: flex;
@@ -162,4 +148,14 @@ nav li:hover>ul>li {
 .menu ul ul {
     left: 100%;
     top: 0;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    background-color: #333;
+    text-align: center;
+    color: white;
 }
