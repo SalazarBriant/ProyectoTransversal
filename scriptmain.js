@@ -21,3 +21,28 @@ async function fetchWeather() {
 }
 
 fetchWeather();
+
+ function validarFormulario() {
+         // Obtener los valores de los campos de entrada
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("com").value;
+
+        // Verificar si los campos están vacíos
+             if (nombre == "") {
+                mostrarMensaje("Por favor, ingresa tu nombre.");
+                  return false;
+             } else if (com == "") {
+                   mostrarMensaje("Por favor, ingresa el comentario.");
+                  return false;
+              }
+
+        // Si todos los campos son válidos, mostrar un mensaje de éxito
+        mostrarMensaje("Gracias por enviar el formulario, " + nombre + "!");
+        return false; // Evitar que el formulario se envíe de forma predeterminada
+        }
+        function mostrarMensaje(mensaje) {
+            document.getElementById("mensaje").innerHTML = mensaje;// Mostrar el mensaje en el elemento con el id "mensaje"
+            setTimeout(function() {
+                document.getElementById("mensaje").innerHTML = "";// Después de 3 segundos, borrar el mensaje
+            }, 3000);
+        }
