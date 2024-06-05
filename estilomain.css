@@ -19,6 +19,16 @@
 }
 
 /*Cuerpo*/
+.formulario{
+        background-color: #fff;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
 #texto{
     background-color: white;
     margin: 0 auto;
