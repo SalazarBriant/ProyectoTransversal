@@ -22,27 +22,30 @@ async function fetchWeather() {
 
 fetchWeather();
 
- function validarFormulario() {
-         // Obtener los valores de los campos de entrada
-            var nombre = document.getElementById("nombre").value;
-            var email = document.getElementById("com").value;
+ document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-        // Verificar si los campos están vacíos
-             if (nombre == "") {
-                mostrarMensaje("Por favor, ingresa tu nombre.");
-                  return false;
-             } else if (com == "") {
-                   mostrarMensaje("Por favor, ingresa el comentario.");
-                  return false;
-              }
+        if (name === "" || email === "" || message === "") {
+            alert("Por favor, Rellene todos los campos.");
+            return;
+        }
 
-        // Si todos los campos son válidos, mostrar un mensaje de éxito
-        mostrarMensaje("Gracias por enviar el formulario, " + nombre + "!");
-        return false; // Evitar que el formulario se envíe de forma predeterminada
+        if (!validateEmail(email)) {
+            alert("Ingrese un correo electrónico válido.");
+            return;
         }
-        function mostrarMensaje(mensaje) {
-            document.getElementById("mensaje").innerHTML = mensaje;// Mostrar el mensaje en el elemento con el id "mensaje"
-            setTimeout(function() {
-                document.getElementById("mensaje").innerHTML = "";// Después de 3 segundos, borrar el mensaje
-            }, 3000);
-        }
+
+        alert("Mensaje enviado con éxito!");
+        form.reset();
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
