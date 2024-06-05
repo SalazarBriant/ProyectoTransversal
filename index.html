@@ -69,6 +69,15 @@
             <h1 class="tituloclima">Hoy, el clima actual en Tijuana es:</h1>
             <div id="weather"></div>
         </div>
+        <div class="Formulario">
+        <form id="miFormulario" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="comentario">Comentario al desarollador:</label>
+            <textarea id="com" name="com"><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
     </article>
     <footer>
         <p>© Proyecto Transversal Grupo 4-APV, 2024</p>
