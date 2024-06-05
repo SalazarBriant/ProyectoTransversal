@@ -41,8 +41,7 @@ fetchWeather();
             return;
         }
 
-        alert("Mensaje enviado con éxito!");
-        form.reset();
+        window.alert("Mensaje enviado con éxito!");
     });
 
     function validateEmail(email) {
