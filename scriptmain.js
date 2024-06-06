@@ -21,30 +21,3 @@ async function fetchWeather() {
 }
 
 fetchWeather();
-
- document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contactForm");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        if (name === "" || email === "" || message === "") {
-            alert("Por favor, Rellene todos los campos.");
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            alert("Ingrese un correo electrónico válido.");
-            return;
-        }
-
-        window.alert("Mensaje enviado con éxito!");
-    });
-
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
